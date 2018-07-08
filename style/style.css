@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../images/bg.jpg);
+    font-family: 'Cookie', cursive;
+    color: rgb(31, 22, 16);
+    font-size: 30px;
+}
+
+header {
+    height: 50vw;
+    background-size: cover;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4.5vw;
+    color: white;
+}
+
+h2 {
+    font-size: 3.5vw;
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+.start {
+    position: fixed;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    background: rgba(133, 134, 134, 0.89);
+    visibility: visible;
+    margin: auto;
+}
+
+ol {
+    margin-left: 20%; 
+}
+
+.error {
+    border: 1px solid red;
+}
+
+button {
+    margin: 10px;
+    height: 50px;
+    width: 200px;
+    background: rgb(116, 88, 116);
+    border: none;
+    font-family: 'Cookie', cursive;
+    font-size: 40px;
+}
+
+button:hover {
+    text-shadow: rgba(255, 255, 255, 0.815) 0 0 10px;
+}
+
+.wrapper {
+    margin: 50px;
+}
+
+.clock {
+    margin: 10px; 
+    background-color: rgba(2, 24, 74, 0.7); 
+    color:white; 
+    font: 24px Arial; 
+    text-align:center;
+}
+
+.match_field {
+    background:#CCC;
+	border:#999 2px solid;
+	width:900px;
+	padding:24px;
+    margin:0px auto;
+    text-align:center;
+}
+
+.match_field > div{
+    display: inline-block;
+	width: 120px;
+	height: 120px;
+	margin:10px;
+	font-size:64px;
+	cursor:pointer;
+    text-align:center;
+    background-color: rgb(73, 36, 70);  /*rgb(75, 122, 141); */
+}
+
+.match_field img {
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+
+.flipped {
+    transform: rotatey(-180deg);
+    transition: 1s;
+    box-shadow: -8px 8px 5px gray;
+}
+
+.flipped img{
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.unflipped {
+    transition: 1s;
+}
+
+.coincided {
+    visibility: hidden;
+}
+
+.end {
+    position: fixed;
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left: 15%;
+}
+
+.the_end {
+    position: fixed;
+    top: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/game-over.png);
+    background-size: cover; 
+}
+
+.records {
+    height: 500px;
+    width: 850px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.623);
+}
+
+tr, td {
+    border: 2px solid white;
+}
+
+.result_time {
+    color: aliceblue;
+    margin: 0 200px;
+}

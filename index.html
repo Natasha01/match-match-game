@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>match-match</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <script src="script/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Math Match Game</h1>
+        <h2>Test your memory!</h2>
+    </header>
+    <main>
+        <div id="start" class="start">
+            <h3 class="center">How to play:</h3>
+            <p class="center">Memory is a counter game where the object is to find pairs.</p>
+            <p class="center">When the game begins, all pictures are hidden.</p>
+            <h3 class="center">To play:</h3>
+            <ol>
+                <li>Select two cards to try to match the pictures.</li>
+                <li>If you match the pictures you can go again.</li>
+                <li>If they don't match it is the computer turn them.</li>
+                <li>The player that finds all pairs wins!</li>
+                <li>Have Fun!</li>
+            </ol>
+            <form name="init" onsubmit="validate(); return false;" class="center">
+                <div>
+                    <label for="firstName">Firs name: </label>
+                    <input id="firstName" name="firstname" type="text">
+
+                    <label for="lastName">Last name: </label>
+                    <input id="lastName" name="lastname" type="text">
+
+                    <label for="emailAddress">E-mail: </label>
+                    <input id="emailAddress" name="email" type="email">
+                </div>
+                <p>Please choose the theme of the game:</p>
+                <div>
+                    <input type="radio" id="themeChoice1" name="theme" value="GameOfThrones" checked>
+                    <label for="themeChoice1">Game Of Thrones</label>
+
+                    <input type="radio" id="themeChoice2" name="theme" value="Witch">
+                    <label for="themeChoice2">Witch</label>
+
+                    <input type="radio" id="themeChoice3" name="theme" value="HarryPotter">
+                    <label for="themeChoice3">Harry Potter</label>
+                </div>
+                <p>Please choose the difficulty of the game:</p>
+                <div>
+                    <input type="radio" id="difficultyChoice1" name="difficulty" value="10" checked>
+                    <label for="difficultyChoice1">Low</label>
+
+                    <input type="radio" id="difficultyChoice2" name="difficulty" value="16">
+                    <label for="difficultyChoice2">Medium</label>
+
+                    <input type="radio" id="difficultyChoice3" name="difficulty" value="24">
+                    <label for="difficultyChoice3">Hight</label>
+                </div>
+                <div>
+                    <button type="submit" id="go_button">Let's Go!</button>
+                </div>
+            </form>
+        </div>
+        <div id="wrapper" class="wrapper center">
+            <div id="greeting"></div>
+            <button onclick="newField()">New Game</button>
+            <div id="clock_div" class="clock">
+                <span class="minutes">00</span>
+                <span>:</span>
+                <span class="seconds">00</span>
+            </div>
+            <div id="field" class="match_field"></div>
+        </div>
+        <div class="the_end">
+            <table class="records">
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <span class="result_time"></span>
+            <button onclick="closeRecords()">Ok</button>
+        </div>
+    </main>
+</body>
+
+</html>
